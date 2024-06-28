@@ -16,7 +16,7 @@
             {
                 //arrEmps[i] = new Employee();
                 //arrEmps[i].EmpNo
-                Console.WriteLine(arrEmps[i]);
+                Console.WriteLine(i);
             }
         }
 
