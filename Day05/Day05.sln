@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Params", "Params\Params.csproj", "{274C189B-8257-46BA-AE6B-EF964781DB53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Params", "Params\Params.csproj", "{274C189B-8257-46BA-AE6B-EF964781DB53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraySorting", "ArraySorting\ArraySorting.csproj", "{20A9D618-B74A-447C-93A8-ED5B18318F04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArraySorting", "ArraySorting\ArraySorting.csproj", "{20A9D618-B74A-447C-93A8-ED5B18318F04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indices&Ranges", "Indices&Ranges\Indices&Ranges.csproj", "{D4BF5005-F372-40BD-AB4C-EB42EE71C1BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Indices&Ranges", "Indices&Ranges\Indices&Ranges.csproj", "{D4BF5005-F372-40BD-AB4C-EB42EE71C1BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TupleAndValueTuple", "TupleAndValueTuple\TupleAndValueTuple.csproj", "{7F67B8AE-7A5B-47DE-99D3-9F8082FCBCB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TupleAndValueTuple", "TupleAndValueTuple\TupleAndValueTuple.csproj", "{7F67B8AE-7A5B-47DE-99D3-9F8082FCBCB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading", "OperatorOverloading\OperatorOverloading.csproj", "{5969029E-8539-4953-A9D8-057F36D11D4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OperatorOverloading", "OperatorOverloading\OperatorOverloading.csproj", "{5969029E-8539-4953-A9D8-057F36D11D4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indexers", "Indexers\Indexers.csproj", "{2D387083-DFA3-4E38-806E-43A3ECC58968}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Indexers", "Indexers\Indexers.csproj", "{2D387083-DFA3-4E38-806E-43A3ECC58968}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuncActionPredicate", "FuncActionPredicate\FuncActionPredicate.csproj", "{2D82701C-4EC3-4EC6-8FDD-903EE7CE1829}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuncActionPredicate", "FuncActionPredicate\FuncActionPredicate.csproj", "{2D82701C-4EC3-4EC6-8FDD-903EE7CE1829}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymousMethodsAndLambdas", "AnonymousMethodsAndLambdas\AnonymousMethodsAndLambdas.csproj", "{57CF2FF3-6283-4FD3-8425-EA77955ACE49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{2D82701C-4EC3-4EC6-8FDD-903EE7CE1829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D82701C-4EC3-4EC6-8FDD-903EE7CE1829}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D82701C-4EC3-4EC6-8FDD-903EE7CE1829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57CF2FF3-6283-4FD3-8425-EA77955ACE49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57CF2FF3-6283-4FD3-8425-EA77955ACE49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57CF2FF3-6283-4FD3-8425-EA77955ACE49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57CF2FF3-6283-4FD3-8425-EA77955ACE49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
