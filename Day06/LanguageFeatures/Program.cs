@@ -55,156 +55,141 @@ namespace PartialClasses
     //partial classes must be in the same assembly
     //partial classes must be in the same namespace
     //partial classes must have the same name
-    public partial class Class1
+
+    namespace PartialClasses
     {
-        public int i;
-    }
-    public partial class Class1
-    {
-        public int j;
-    }
-    public class Program
-    {
-        public static void Main3()
+        public partial class Class1
         {
-            Class1 o = new Class1();
-
-        }
-    }
-}
-namespace PartialClasses
-{
-    public partial class Class1
-    {
-        public int k;
-    }
-
-}
-
-namespace PartialMethods
-{
-    public class MainClass
-    {
-        public static void Main1()
-        {
-            Class1 o = new Class1();
-            Console.WriteLine(o.Check());
-            Console.ReadLine();
-        }
-    }
-    //Partial methods can only be defined within a partial class.
-    //Partial methods must return void.
-    //Partial methods can be static or instance level.
-    //Partial methods cannnot have out params
-    //Partial methods are always implicitly private.
-    public partial class Class1
-    {
-        private bool isValid = true;
-        partial void Validate();
-        public bool Check()
-        {
-            //.....
-            Validate();
-            return isValid;
-        }
-    }
-    public partial class Class1
-    {
-        partial void Validate()
-        {
-            //perform some validation code here
-            isValid = false;
-        }
-    }
-
-}
-
-namespace ExtensionMethods
-{
-    internal class Program
-    {
-        static void Main1()
-        {
-            int i = 100;
-
-            i = i.Add(5);
-            i.Display();//MyExtClass.Display(i);   
-            i.ExtMethodForBaseClass();
-
-
-            string s = "aaa";
-            s.Show();
-            s.ExtMethodForBaseClass();
-        }
-        static void Main2()
-        {
-            int i = 100;
-            i = MyExtClass.Add(i, 5);
-            MyExtClass.Display(i);
-
-            string s = "aaa";
-            MyExtClass.Show(s);
-        }
-        static void Mains()
-        {
-            ClsMaths objClsMaths = new ClsMaths();
-            Console.WriteLine(objClsMaths.Add(10, 5));
-            Console.WriteLine(objClsMaths.Multiply(10, 5));
-            Console.WriteLine(objClsMaths.Subtract(10, 5));
-
+            public int k;
         }
 
     }
-    //create a extension method
-    //step 1 : create a static method in a static class
-    public static class MyExtClass
+
+    namespace PartialMethods
     {
-        public static int Add(this int i, int x)
+        public class MainClass
         {
-            return i + x;
+            public static void Main4()
+            {
+                Class1 o = new Class1();
+                Console.WriteLine(o.Check());
+                Console.ReadLine();
+            }
         }
-        //step 2 : the 1st parameter must be  the Type
-        //for which you write an extension method,
-        //preceded by the 'this' keyword
-        public static void Display(this int i)
+        //Partial methods can only be defined within a partial class.
+        //Partial methods must return void.
+        //Partial methods can be static or instance level.
+        //Partial methods cannnot have out params
+        //Partial methods are always implicitly private.
+        public partial class Class1
         {
-            Console.WriteLine(i);
+            private bool isValid = true;
+            partial void Validate();
+            public bool Check()
+            {
+                //.....
+                Validate();
+                return isValid;
+            }
         }
-        public static void Show(this string s)
+        public partial class Class1
         {
-            Console.WriteLine(s);
-        }
-        //if you define an ext method for the base class,
-        //it is also available for the derived class
-        public static void ExtMethodForBaseClass(this object o)
-        {
-            Console.WriteLine(o);
+            partial void Validate()
+            {
+                //perform some validation code here
+                isValid = false;
+            }
         }
 
-        //if you define an ext method for an interface
-        //it is also available for the classes that implement that interface
-        public static int Subtract(this IMathOperations objIMath, int a, int b)
-        {
-            return a - b;
-        }
     }
 
-    public interface IMathOperations
+    namespace ExtensionMethods
     {
-        int Add(int a, int b);
-        int Multiply(int a, int b);
-    }
-
-    public class ClsMaths : IMathOperations
-    {
-        public int Add(int a, int b)
+        internal class Program
         {
-            return a + b;
-        }
-        public int Multiply(int a, int b)
-        {
-            return a * b;
-        }
-    }
+            static void Main()
+            {
+                int i = 100;
 
+                i = i.Add(5);
+                i.Display();//MyExtClass.Display(i);   
+                i.ExtMethodForBaseClass();
+
+
+                string s = "aaa";
+                s.Show();
+                s.ExtMethodForBaseClass();
+            }
+            static void Main2()
+            {
+                int i = 100;
+                i = MyExtClass.Add(i, 5);
+                MyExtClass.Display(i);
+
+                string s = "aaa";
+                MyExtClass.Show(s);
+            }
+            static void Mains()
+            {
+                ClsMaths objClsMaths = new ClsMaths();
+                Console.WriteLine(objClsMaths.Add(10, 5));
+                Console.WriteLine(objClsMaths.Multiply(10, 5));
+                Console.WriteLine(objClsMaths.Subtract(10, 5));
+
+            }
+
+        }
+        //create a extension method
+        //step 1 : create a static method in a static class
+        public static class MyExtClass
+        {
+            public static int Add(this int i, int x)
+            {
+                return i + x;
+            }
+            //step 2 : the 1st parameter must be  the Type
+            //for which you write an extension method,
+            //preceded by the 'this' keyword
+            public static void Display(this int i)
+            {
+                Console.WriteLine(i);
+            }
+            public static void Show(this string s)
+            {
+                Console.WriteLine(s);
+            }
+            //if you define an ext method for the base class,
+            //it is also available for the derived class
+            public static void ExtMethodForBaseClass(this object o)
+            {
+                Console.WriteLine(o);
+            }
+
+            //if you define an ext method for an interface
+            //it is also available for the classes that implement that interface
+            public static int Subtract(this IMathOperations objIMath, int a, int b)
+            {
+                return a - b;
+            }
+        }
+
+        public interface IMathOperations
+        {
+            int Add(int a, int b);
+            int Multiply(int a, int b);
+        }
+
+        public class ClsMaths : IMathOperations
+        {
+            public int Add(int a, int b)
+            {
+                return a + b;
+            }
+            public int Multiply(int a, int b)
+            {
+                return a * b;
+            }
+        }
+
+    }
 }
