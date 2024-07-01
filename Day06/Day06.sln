@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{C373C175-9BAC-4104-99E2-6C276B81801A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{C373C175-9BAC-4104-99E2-6C276B81801A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventHandler", "EventHandler\EventHandler.csproj", "{B5A20723-D375-42B6-96A8-B7DFB3ED7530}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageFeatures", "LanguageFeatures\LanguageFeatures.csproj", "{5A689F9F-BD5D-4A30-966F-835BB34BDA31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{C373C175-9BAC-4104-99E2-6C276B81801A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C373C175-9BAC-4104-99E2-6C276B81801A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C373C175-9BAC-4104-99E2-6C276B81801A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5A20723-D375-42B6-96A8-B7DFB3ED7530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5A20723-D375-42B6-96A8-B7DFB3ED7530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5A20723-D375-42B6-96A8-B7DFB3ED7530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5A20723-D375-42B6-96A8-B7DFB3ED7530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A689F9F-BD5D-4A30-966F-835BB34BDA31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A689F9F-BD5D-4A30-966F-835BB34BDA31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A689F9F-BD5D-4A30-966F-835BB34BDA31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A689F9F-BD5D-4A30-966F-835BB34BDA31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
