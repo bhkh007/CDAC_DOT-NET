@@ -20,7 +20,6 @@
             }
         }
 
-
         static void Main5()
         {
             //jagged
@@ -62,7 +61,6 @@
             Console.ReadLine();
 
         }
-
 
             static void Main4()
         {

@@ -11,7 +11,7 @@ namespace Delegates1
     //Del1
 
     public delegate int DelAdd(int a, int b);
-    internal class Program
+    internal class Programs
     {
         static void Main1()
         {

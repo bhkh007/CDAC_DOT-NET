@@ -25,12 +25,12 @@ namespace LinqExample1
 
             lstEmp.Add(new Employee { EmpNo = 8, Name = "Shraddha", Basic = 11000, DeptNo = 40, Gender = "F" });
         }
-        static void Main()
+        static void Main1()
         {
             AddRecs();
             // var returnvalue = from single_object in collection select something
-            var emps = from emp in lstEmp select emp;
-            //IEnumerable<Employee> emps = from emp in lstEmp select emp;
+           // var emps = from emp in lstEmp select emp;
+            IEnumerable<Employee> emps = from emp in lstEmp select emp;
             foreach (var item in emps)
             {
                 Console.WriteLine(item);
@@ -64,14 +64,14 @@ namespace LinqExample1
                        where emp.Basic > 10000
                        select emp;
 
-            //var emps = from emp in lstEmp
-            //           where emp.Basic > 10000 && emp.Basic < 12000
-            //           select emp;
+            var empls = from emp in lstEmp
+                      where emp.Basic >= 10000 && emp.Basic < 12000
+                       select emp;
 
-            //var emps = from emp in lstEmp
-            //           where emp.Name.StartsWith("V")
-            //           select emp;
-            foreach (var emp in emps)
+            var emplos = from emp in lstEmp
+                       where emp.Name.StartsWith("V")
+                       select emp;
+            foreach (var emp in emplos)
             {
                 Console.WriteLine(emp);
             }
@@ -105,11 +105,9 @@ namespace LinqExample1
             Console.ReadLine();
 
         }
-        static void Main6()
+        static void Main()
         {
             AddRecs();
-
-
 
             var emps = from emp in lstEmp
                        join dept in lstDept
