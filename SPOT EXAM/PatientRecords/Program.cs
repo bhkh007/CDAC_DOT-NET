@@ -6,8 +6,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PatientRecords
 {
-    
-
     public class Patient
     {
         private int patientId;
@@ -36,6 +34,7 @@ namespace PatientRecords
             {
                 if (string.IsNullOrEmpty(value))
                     throw new ValidationException("Patieint name not null");
+                patientName = value;
             }
         }
         public int Age
@@ -164,6 +163,7 @@ namespace PatientRecords
             }
 
             //g
+
 
             Console.WriteLine();
 
