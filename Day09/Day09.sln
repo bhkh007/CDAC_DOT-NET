@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialization", "Serializat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjection", "DI\DependencyInjection.csproj", "{8DB28D54-928F-4864-A597-1768746C916A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPL", "TPL\TPL.csproj", "{F07D9A00-F6BD-4A84-9267-FAACDB3C087E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parallel Threads", "TPL\Parallel Threads.csproj", "{F07D9A00-F6BD-4A84-9267-FAACDB3C087E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileWorking", "FileWorking\FileWorking.csproj", "{6F86AF11-70F8-46DD-BE19-9C0EC6889EAF}"
 EndProject
