@@ -23,6 +23,7 @@ namespace PatientRecords
             {
                 if (value <= 0)
                     throw new ValidationException("Patient id must be greater");
+
                 patientId = value;
             }
         }
@@ -34,6 +35,7 @@ namespace PatientRecords
             {
                 if (string.IsNullOrEmpty(value))
                     throw new ValidationException("Patieint name not null");
+
                 patientName = value;
             }
         }
@@ -44,6 +46,7 @@ namespace PatientRecords
             {
                 if (value <= 0)
                     throw new ValidationException("Age not null");
+
                 age = value;
             }
         }
@@ -71,6 +74,7 @@ namespace PatientRecords
             {
                 if (value <= 0)
                     throw new ValidationException("Id not null");
+
                 doctorId = value;
             }
         }
@@ -82,6 +86,7 @@ namespace PatientRecords
             {
                 if (string.IsNullOrEmpty(value))
                     throw new ValidationException("Doctor Name not null");
+
                 doctorName = value;
             }
         }
