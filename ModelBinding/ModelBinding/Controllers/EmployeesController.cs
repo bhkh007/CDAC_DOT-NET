@@ -39,16 +39,19 @@ namespace ModelBinding.Controllers
         // POST: EmployeesController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection , int EmpNo,string Name,decimal Basic,int DeptNo)
+        //public ActionResult Create(IFormCollection collection)
+        //public ActionResult Create(int EmpNo, string Name, decimal Basic, int DeptNo)//Binding
+        //public ActionResult Create(Employee empObj, IFormCollection collection,int EmpNo, string Name, decimal Basic, int DeptNo)//Model
+        public ActionResult Create(Employee empObj)
         {
             try
             {
-
-                string name = collection["Name"];
+               /* string name = collection["Name"];  // instead if this pass obj in parameter
                 string empno = collection["EmpNo"];
                 string basic = collection["Basic"];
-                string empNo = collection["DeptNo"];
-                return RedirectToAction(nameof(Index));
+                string empNo = collection["DeptNo"];*/
+                //return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index"); 
             }
             catch
             {
@@ -57,15 +60,20 @@ namespace ModelBinding.Controllers
         }
 
         // GET: EmployeesController/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int id )
         {
-            return View();
+            Employee empObj = new Employee();
+            empObj.EmpNo = id;
+            empObj.EmpName = "Ashwin";
+            empObj.Basic = 999999;
+            empObj.DeptNo = 11;
+            return View(empObj);
         }
 
         // POST: EmployeesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Employee empObj)
         {
             try
             {
@@ -78,15 +86,20 @@ namespace ModelBinding.Controllers
         }
 
         // GET: EmployeesController/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int id = 1)
         {
-            return View();
+            Employee empObj = new Employee();
+            empObj.EmpNo = id;
+            empObj.EmpName = "Ashwin";
+            empObj.Basic = 999999;
+            empObj.DeptNo = 11;
+            return View(empObj);
         }
 
         // POST: EmployeesController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, Employee empObj)
         {
             try
             {
