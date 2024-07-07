@@ -8,9 +8,9 @@ namespace DatabaseCode
         static void Main()
         {
             Connect();
-            //Insert1();
+            Insert1();
             Employee obj = new Employee { EmpNo = 6, Name = "Alfred D'Mello", Basic = 99999, DeptNo = 20 };
-            Insert2(obj);
+            //Insert2(obj);
             //InsertWithParameters(obj);
             //InsertWithStoredProcedure(obj);
             //SelectSingleValue();
@@ -51,8 +51,8 @@ namespace DatabaseCode
                 cn.Open();
                 SqlCommand cmdInsert = new SqlCommand();
                 cmdInsert.Connection = cn;
-                cmdInsert.CommandType = System.Data.CommandType.Text;
-                cmdInsert.CommandText = "insert into Employees values (3, 'Pradeep', 1200, 30)";
+               // cmdInsert.CommandType = System.Data.CommandType.Text;
+                cmdInsert.CommandText = "insert into Employees values (5, 'Bhavesh', 1500, 30)";
                 cmdInsert.ExecuteNonQuery();
                 Console.WriteLine("wokay");
             }
