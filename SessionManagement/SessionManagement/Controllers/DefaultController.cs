@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using System.Text.Json;
 
-namespace StateManagement1.Controllers
+namespace SessionManagement.Controllers
 {
     public class DefaultController : Controller
     {

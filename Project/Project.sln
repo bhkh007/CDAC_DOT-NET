@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherForecasting", "WebApplications\WeatherForecasting.csproj", "{9C5359A6-3F71-448A-A780-BC694AAC766B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentAPI", "StudentAPI\StudentAPI.csproj", "{F6EC9E20-FBA7-4EF4-8B77-F56FC1A72903}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentAPI", "StudentAPI\StudentAPI.csproj", "{F6EC9E20-FBA7-4EF4-8B77-F56FC1A72903}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationPractice", "WebApplicationPractice\WebApplicationPractice.csproj", "{FC7C59C0-F41D-4BB3-9202-C319DE65C7A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F6EC9E20-FBA7-4EF4-8B77-F56FC1A72903}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6EC9E20-FBA7-4EF4-8B77-F56FC1A72903}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6EC9E20-FBA7-4EF4-8B77-F56FC1A72903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC7C59C0-F41D-4BB3-9202-C319DE65C7A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC7C59C0-F41D-4BB3-9202-C319DE65C7A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC7C59C0-F41D-4BB3-9202-C319DE65C7A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC7C59C0-F41D-4BB3-9202-C319DE65C7A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
