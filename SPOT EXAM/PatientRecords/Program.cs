@@ -6,7 +6,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PatientRecords
 {
-    public class Patient
+
+    public class ValidationException : Exception 
+    {
+        public ValidationException(string message) : base(message) { }
+    }
+
+public class Patient
     {
         private int patientId;
         private string patientName;
@@ -183,12 +189,13 @@ namespace PatientRecords
             }
 
             Console.WriteLine();
+
             //i
             Console.WriteLine("Join doctors and patients");
             var doctorOnly = from d in doctors
                              join p in patients on d.DoctorId equals p.DoctorId
                              select d;
-            foreach (var patient in patientage20_30)
+            foreach (var patient in doctorOnly)
             {
                 Console.WriteLine(patient);
             }
@@ -200,10 +207,31 @@ namespace PatientRecords
             var propertiesDoctorAndPatient = from p in patients
                                              join d in doctors on p.DoctorId equals d.DoctorId
                                              select new { p.PatientName, p.Age, d.DoctorId };
-            foreach (var patient in joinPatientAndDoctor)
+            foreach (var patient in propertiesDoctorAndPatient)
             {
                 Console.WriteLine($"PatientName:{patient.PatientName},PatientAge:{patient.Age}, Doctorname:{patient.DoctorId}");
             }
+
+            Console.WriteLine();
+            Console.WriteLine("Patients name starts with A or U");
+
+            var nameWithAOrU = from p in patients
+                       where p.PatientName.StartsWith("A") || p.PatientName.StartsWith("U")
+                       select p;
+            foreach (var patient in nameWithAOrU)
+            {
+                Console.WriteLine($"PatientsName:{patient.PatientName}");
+            }
+
+            var namewithAOrU = patients.Where(p => p.PatientName.StartsWith("A")&&p.PatientName.StartsWith("U"));
+            foreach (var patient in namewithAOrU)
+            {
+                Console.WriteLine($"PatientsName:{patient.PatientName}");
+            }
+
+
         }
+
+
     }
 }
