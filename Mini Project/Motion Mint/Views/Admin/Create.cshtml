@@ -1,0 +1,162 @@
+﻿@model Motion_Mint.Models.Admin
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+             background: url('cretacretarightfrontthreequarter.png') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0; /* Remove default margin */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Minimum full viewport height */
+        }
+        .heading{
+            position:relative;
+            margin-top:-150px;
+            font-size:20px;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for form */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+            max-width: 90%;
+            align-items:center;
+            justify-content:center;
+        }
+
+            .form-container h1 {
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            .form-container form {
+                margin-top: 20px;
+            }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+            .form-group label {
+                font-weight: bold;
+                color: #333;
+            }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+            .form-control:focus {
+                outline: none;
+                border-color: #3498db;
+            }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #2980b9;
+            }
+
+        .text-danger {
+            color: red; /* Validation message color */
+        }
+
+        .back-to-list {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+            .back-to-list a {
+                color: #fff; /* Link color */
+                text-decoration: none;
+            }
+
+                .back-to-list a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+    <div class="container-fluid heading">
+        <div class="text-center">
+            <h1 class="display-4">Welcome to <span style="color: darkblue; font-weight: bold;">Motion Mint</span> Car Rental</h1>
+            <p class="lead">Explore the best car rental experience with Motion Mint. Book your ride today!</p>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+
+    <div class="form-container" style="margin-left:100px
+">
+        <h1>Login</h1>
+
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">Email</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Password" class="control-label">Password</label>
+                <input type="password" asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+
+        @{
+            <h3 style="color:red">@ViewBag.message</h3>
+        }
+    </div>
+
+   @*  <div class="back-to-list">
+        <a asp-action="Index">Back to List</a>
+    </div> *@
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+
+</body>
+</html>
