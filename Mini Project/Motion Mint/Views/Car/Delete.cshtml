@@ -1,0 +1,123 @@
+﻿@model Motion_Mint.Models.Carreg
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Motion Mint Car Rental</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn-back {
+            margin-right: 10px;
+        }
+
+        .card-details {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+            .card-details dt {
+                font-weight: bold;
+            }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+            .btn-danger:hover {
+                background-color: #c82333;
+                border-color: #bd2130;
+            }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+            .btn-secondary:hover {
+                background-color: #5a6268;
+                border-color: #545b62;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Delete Registered Car</h1>
+
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">Are you sure you want to delete this car?</h4>
+            <p>This action cannot be undone. Please confirm your decision.</p>
+        </div>
+
+        <div class="card-details">
+            <h4>Car Details</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">Car Number:</dt>
+                <dd class="col-sm-10">@Html.DisplayFor(model => model.Carno)</dd>
+
+                <dt class="col-sm-2">Make:</dt>
+                <dd class="col-sm-10">@Html.DisplayFor(model => model.Make)</dd>
+
+                <dt class="col-sm-2">Model:</dt>
+                <dd class="col-sm-10">@Html.DisplayFor(model => model.Model)</dd>
+
+                <dt class="col-sm-2">Available:</dt>
+                <dd class="col-sm-10">@Html.DisplayFor(model => model.Available)</dd>
+            </dl>
+        </div>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a asp-action="Index" class="btn btn-secondary btn-back">Back to List</a>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+            integrity="sha384-hVFv7YMuBFRFi6Fvjt3uK4L/lm/AOjPCotQfFjw/J9pIu50S6ap9kRuH6kVfww/g"
+            crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-hVFv7YMuBFRFi6Fvjt3uK4L/lm/AOjPCotQfFjw/J9pIu50S6ap9kRuH6kVfww/g"
+            crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
