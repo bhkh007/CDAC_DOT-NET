@@ -1,0 +1,162 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- About  -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title text-primary"><i class="fas fa-info-circle"></i> About Motion Mint</h2>
+                    <p class="card-text">
+                        Welcome to Motion Mint, your premier car rental service. We offer a wide range of vehicles to meet your transportation needs, whether you're looking for a compact car for city driving, a luxury sedan for a special occasion, or an SUV for a family trip. Our mission is to provide our customers with high-quality, reliable vehicles and exceptional customer service.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Why Choose Us  -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title text-success"><i class="fas fa-check-circle"></i> Why Choose Motion Mint?</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h5 class="text-info"><i class="fas fa-car"></i> Wide Selection of Vehicles</h5>
+                            <p>
+                                From economy cars to luxury vehicles, we have a diverse fleet to cater to all preferences and budgets.
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h5 class="text-info"><i class="fas fa-dollar-sign"></i> Affordable Prices</h5>
+                            <p>
+                                We offer competitive pricing with no hidden fees, ensuring that you get the best value for your money.
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h5 class="text-info"><i class="fas fa-headset"></i> Excellent Customer Service</h5>
+                            <p>
+                                Our dedicated support team is available 24/7 to assist you with any inquiries or issues you may have.
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h5 class="text-info"><i class="fas fa-mobile-alt"></i> Easy Booking Process</h5>
+                            <p>
+                                Our user-friendly website and mobile app make it easy to browse, book, and manage your rental.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Services  -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title text-success"><i class="fas fa-concierge-bell"></i> Our Services</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h5 class="text-info"><i class="fas fa-calendar-day"></i> Daily Rentals</h5>
+                            <p>
+                                Flexible daily rental options for short-term needs.
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h5 class="text-info"><i class="fas fa-calendar-week"></i> Weekly Rentals</h5>
+                            <p>
+                                Cost-effective weekly rental packages for longer trips.
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h5 class="text-info"><i class="fas fa-calendar-alt"></i> Monthly Rentals</h5>
+                            <p>
+                                Convenient monthly rental plans for extended use.
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h5 class="text-info"><i class="fas fa-star"></i> Luxury Car Rentals</h5>
+                            <p>
+                                Premium vehicles for special occasions and business needs.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact  -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title text-success"><i class="fas fa-envelope"></i> Contact Us</h3>
+                    <p class="card-text">
+                        For more information about our services, please don't hesitate to get in touch with us. We're here to help you with all your car rental needs.
+                    </p>
+                    <div class="card bg-light mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-at"></i> Email</h5>
+                            <p class="card-text">support@motionmint.com</p>
+                        </div>
+                    </div>
+                    <div class="card bg-light mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-phone"></i> Phone</h5>
+                            <p class="card-text">+91 8886464123</p>
+                        </div>
+                    </div>
+                    <a href="/Contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .card {
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-body {
+        padding: 20px;
+        background-color: #f8f9fa;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .list-group-item {
+        border: none;
+        background-color: #e9ecef;
+    }
+
+        .list-group-item h5 {
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+
+        .list-group-item p {
+            margin-bottom: 0;
+            font-size: 0.875rem;
+        }
+
+    .text-primary {
+        color: #007bff !important;
+    }
+
+    .text-success {
+        color: #28a745 !important;
+    }
+
+    .text-info {
+        color: #17a2b8 !important;
+    }
+</style>
