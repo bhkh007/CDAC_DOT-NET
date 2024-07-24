@@ -1,0 +1,236 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <style>
+        .carousel-item {
+            height: 60vh;
+        }
+
+            .carousel-item img {
+                object-fit: cover;
+                height: 60vh;
+            }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        .card {
+            transition: transform 0.3s ease;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+
+        .special-section {
+            font-family: 'Lobster', cursive;
+            font-size: 1.5rem;
+            color: #343a40;
+            text-align: center;
+            margin: 2rem 0;
+            border: 1px solid #007bff; 
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="text-center py-5">
+            <h1 class="display-4">Welcome to <span style="color: darkblue; font-weight: bold;">Motion Mint</span> Car Rental</h1>
+            <p class="lead">Explore the best car rental experience with Motion Mint. Book your ride today!</p>
+        </div>
+
+
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="/xuv700xuv700rightfrontthreequarter.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Hyundai-005</h5>
+                        <p>Fast and Furious</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="/cretacretarightfrontthreequarter.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Porsche-A002</h5>
+                        <p>First Choice Of All Punekars</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/venuevenuerightfrontthreequarter.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Mercedes-Benz</h5>
+                        <p>Speed over heartbeat</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        </br>
+
+      
+        <div class="special-section border rounded p-4">
+            <p>
+                Motion Mint offers a premier car rental experience designed for convenience and comfort.
+                🚗 With a diverse fleet of well-maintained vehicles, including compact cars and spacious SUVs,
+                we cater to every travel need. Experience the convenience and luxury of our car rental services.
+                ✨ At Motion Mint, we ensure your journey is smooth and memorable. 🌟
+            </p>
+        </div>
+        </br>
+
+        
+        <div class="row mt-5">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="/xuv700xuv700rightfrontthreequarter.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Affordable Pricing</h5>
+                        <p class="card-text">Our competitive pricing ensures you get the best value for your money.</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="/sonetsonetrightfrontthreequarter.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">24/7 Customer Support</h5>
+                        <p class="card-text">Our dedicated support team is available around the clock to assist you.</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="/bolerobolerorightfrontthreequarter.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Flexible Rental Options</h5>
+                        <p class="card-text">Choose from daily, weekly, or monthly rental plans that suit your schedule.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </br>
+
+   
+    <div class="special-section">
+        <p>
+            🚗🌟"Drive Your Dreams: Discover, Explore, and Experience with Motion Mint Car Rentals!"🌟🚗
+        </p>
+
+    </div>
+    </br>
+
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="/tribertriberrightfrontthreequarter.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Premium Vehicle Selection</h5>
+                    <p class="card-text">Explore our range of premium vehicles, meticulously maintained for your comfort and style.</p>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="/venuevenuerightfrontthreequarter.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Adventure Ready</h5>
+                    <p class="card-text">Discover our rugged vehicles built for all your adventurous trips, equipped with the latest features for a thrilling experience.</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src="/eecoeecorightfrontthreequarter (1).jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Comfort and Style</h5>
+                    <p class="card-text">Experience comfort and style with our range of modern vehicles designed to enhance your travel experience.</p>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Motion Mint Car Rental. All rights reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <p>Address: 123 Car Rental Street, Mumbai, Maharashtra, India</p>
+                    <p>Phone:+91 8886464123</p>
+                    <p>Email: motionmint@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+            integrity="sha384-hVFv7YMuBFRFi6Fvjt3uK4L/lm/AOjPCotQfFjw/J9pIu50S6ap9kRuH6kVfww/g"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy2Fm8L+sd2au0M0PC5awIIJqj5/t9sUBH"
+            crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        });
+    </script>
+
+</body>
+</html>
